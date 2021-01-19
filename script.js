@@ -3,6 +3,7 @@ const html = document.querySelector('html');
 const devimg = document.querySelector('.dev-image');
 const darksvgArray = document.querySelectorAll('.dark-svg');
 const shadowToggle = document.querySelectorAll('.shadow-toggle');
+const darkModeBtnImages = document.querySelectorAll('.dark-button-image');
 
 const toggleDarkmode =()=>{
     html.classList.toggle('dark');
@@ -15,7 +16,14 @@ const toggleDarkmode =()=>{
         section.classList.toggle('shadow-lg');
     } )
 
-    darksvgArray.forEach(svg => svg.classList.toggle('dark-svg'));
+    darkModeBtnImages.forEach( image => image.classList.toggle('hidden') );
+
+    darksvgArray.forEach(svg => {
+        svg.classList.toggle('dark-svg');
+        svg.classList.toggle('light-svg');
+
+
+});
 }
 
 darkBtn.addEventListener('click',toggleDarkmode)
