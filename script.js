@@ -7,9 +7,9 @@ const darkModeBtnImages = document.querySelectorAll('.dark-button-image');
 
 const toggleDarkmode =()=>{
     html.classList.toggle('dark');
-    html.classList.contains('dark')
-    ? devimg.src = '../images/3323617_1.png'
-    : devimg.src = '../images/3323617.png';
+    // html.classList.contains('dark')
+    // ? devimg.src = '../images/3323617_1.png'
+    // : devimg.src = '../images/3323617.png';
 
     shadowToggle.forEach( section => {
         section.classList.toggle('shadow-dark');
